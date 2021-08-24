@@ -1,0 +1,16 @@
+ $("body").on("change", "input#all_SERIALITY:checkbox", function (event)
+    {
+        event.preventDefault();
+        event.stopPropagation();
+        if ($(this).is(":checked"))
+        {
+            $("input.SERIALITY:checkbox")
+                .prop("checked", true)
+                .change();
+        } else
+        {
+            $("input.SERIALITY:checkbox")
+                .prop("checked", false)
+                .change();
+        }
+    });
